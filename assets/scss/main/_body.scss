@@ -1,0 +1,31 @@
+html{
+    overflow-x: hidden; 
+    @include min-screen(800px){
+        overflow-y: hidden;
+    }
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0px !important;
+    padding: 0px !important;
+    background-color: black;
+}
+
+.content-grid{
+    margin-bottom: -4em;
+}
+
+#download-wrap{
+    position: absolute;
+    bottom: 0;
+    margin: 30px;
+    a{
+        font-size: 1rem;
+        color: rgba(255, 238, 139, 0.8);
+        text-shadow: 2px 2px 2px #000;
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+    }
+}

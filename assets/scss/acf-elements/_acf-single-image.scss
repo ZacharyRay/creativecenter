@@ -1,0 +1,32 @@
+#the-image {
+display: none;
+    @include min-screen(800px){
+      display: block;
+      width: 100%;
+      height: 100vh;
+      margin-right: 0;
+      padding-top: 0%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  
+
+
+// Mobile image single \\
+
+#mobile-images-single{
+  #mobile-image-single{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100vw;
+    height: 100vh;
+    margin-right: 0;
+    padding-top: 0%;
+    @include min-screen(800px){
+      display: none;
+    }
+  }
+}

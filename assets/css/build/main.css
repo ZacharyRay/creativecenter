@@ -1,0 +1,297 @@
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+html {
+  overflow-x: hidden; }
+  @media screen and (min-width: 800px) {
+    html {
+      overflow-y: hidden; } }
+
+body {
+  box-sizing: border-box;
+  margin: 0px !important;
+  padding: 0px !important;
+  background-color: black; }
+
+.content-grid {
+  margin-bottom: -4em; }
+
+#download-wrap {
+  position: absolute;
+  bottom: 0;
+  margin: 30px; }
+  #download-wrap a {
+    font-size: 1rem;
+    color: rgba(255, 238, 139, 0.8);
+    text-shadow: 2px 2px 2px #000;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; }
+
+#burger {
+  position: absolute;
+  display: none; }
+
+.menu_wrapper {
+  display: flex; }
+  .menu_wrapper input + label {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    height: 20px;
+    width: 15px;
+    z-index: 5; }
+    .menu_wrapper input + label span {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      top: 50%;
+      margin-top: -1px;
+      left: 0;
+      display: block;
+      background: black;
+      transition: .5s; }
+    .menu_wrapper input + label span:first-child {
+      top: 3px; }
+    .menu_wrapper input + label span:last-child {
+      top: 16px; }
+  .menu_wrapper label:before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    background-color: #FFED8B;
+    border-radius: 100%;
+    top: 25px;
+    right: 22px;
+    border: 1px solid black; }
+  .menu_wrapper label:hover {
+    cursor: pointer; }
+  .menu_wrapper input:checked + label span {
+    opacity: 0;
+    top: 50%; }
+  .menu_wrapper input:checked + label span:first-child {
+    opacity: 1;
+    transform: rotate(405deg); }
+  .menu_wrapper input:checked + label span:last-child {
+    opacity: 1;
+    transform: rotate(-405deg); }
+  .menu_wrapper input ~ .menu-main-menu-container {
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: -1;
+    transition: .5s;
+    transition-delay: .5s;
+    overflow: hidden; }
+    @media screen and (min-width: 700px) {
+      .menu_wrapper input ~ .menu-main-menu-container > ul:after {
+        content: '';
+        position: absolute;
+        background-image: url("https://californiacreativecenter.org/wp-content/uploads/sites/7/2020/06/MANU-william.png");
+        height: 800px;
+        width: 400px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 466px;
+        width: 233px;
+        left: 208px; } }
+    .menu_wrapper input ~ .menu-main-menu-container > ul {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      position: absolute;
+      top: 13%;
+      left: 20%;
+      right: 20%;
+      list-style: none;
+      padding-inline-start: 0px; }
+      @media screen and (min-width: 720px) {
+        .menu_wrapper input ~ .menu-main-menu-container > ul {
+          left: 40%;
+          right: 50%; } }
+      .menu_wrapper input ~ .menu-main-menu-container > ul > li {
+        opacity: 0;
+        transition: .5s;
+        transition-delay: 0s;
+        font-size: 1.7rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center; }
+        .menu_wrapper input ~ .menu-main-menu-container > ul > li > a {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: white;
+          font-weight: 900;
+          font-family: 'Roboto', sans-serif;
+          display: block;
+          padding: 10px; }
+      .menu_wrapper input ~ .menu-main-menu-container > ul li:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 9px solid transparent;
+        border-right: 9px solid transparent;
+        border-bottom: 15px solid #fded99;
+        margin-right: 10px; }
+      .menu_wrapper input ~ .menu-main-menu-container > ul li:hover:before {
+        -webkit-animation: rotate-center 0.6s ease-in-out both;
+        animation: rotate-center 0.6s ease-in-out both; }
+  .menu_wrapper input:checked ~ .menu-main-menu-container {
+    height: 100%;
+    transition-delay: 0s;
+    z-index: 3; }
+    .menu_wrapper input:checked ~ .menu-main-menu-container > ul > li {
+      opacity: 1;
+      transition-delay: .5s; }
+
+.main-carousel {
+  background: #EEE; }
+
+.carousel-cell {
+  display: none; }
+  @media screen and (min-width: 800px) {
+    .carousel-cell {
+      display: block;
+      width: 100%;
+      height: 100vh;
+      margin-right: 0;
+      padding-top: 0%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; } }
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  font-size: 80px;
+  color: white; }
+
+/* no circle */
+.flickity-button {
+  display: none; }
+  @media screen and (min-width: 800px) {
+    .flickity-button {
+      display: block;
+      background: transparent !important;
+      color: #FFED8B !important; } }
+
+/* big previous & next buttons */
+.flickity-prev-next-button {
+  width: 100px !important;
+  height: 100px !important; }
+
+.slider-is-single {
+  display: none; }
+
+#mobile-images #mobile-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100vw;
+  height: 100vh;
+  margin-right: 0;
+  padding-top: 0%; }
+  @media screen and (min-width: 800px) {
+    #mobile-images #mobile-image {
+      display: none; } }
+
+#the-image {
+  display: none; }
+  @media screen and (min-width: 800px) {
+    #the-image {
+      display: block;
+      width: 100%;
+      height: 100vh;
+      margin-right: 0;
+      padding-top: 0%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; } }
+
+#mobile-images-single #mobile-image-single {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100vw;
+  height: 100vh;
+  margin-right: 0;
+  padding-top: 0%; }
+  @media screen and (min-width: 800px) {
+    #mobile-images-single #mobile-image-single {
+      display: none; } }
+
+#contact-form-the-image {
+  display: none; }
+  @media screen and (min-width: 800px) {
+    #contact-form-the-image {
+      display: block;
+      width: 100%;
+      height: 100vh;
+      margin-right: 0;
+      padding-top: 0%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; } }
+
+#contact-form-mobile-images-single #contact-form-mobile-image-single {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100vw;
+  height: 100vh;
+  margin-right: 0;
+  padding-top: 0%; }
+  @media screen and (min-width: 800px) {
+    #contact-form-mobile-images-single #contact-form-mobile-image-single {
+      display: none; } }
+
+#contact-form-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh; }
+  #contact-form-wrap #contact-form {
+    background-color: rgba(255, 238, 139, 0.8);
+    width: 60%;
+    padding: 40px; }
+    @media screen and (min-width: 800px) {
+      #contact-form-wrap #contact-form {
+        width: 20%; } }
+    #contact-form-wrap #contact-form .forminator-ui {
+      display: none; }
+    #contact-form-wrap #contact-form .forminator-row {
+      width: 100%; }
+    #contact-form-wrap #contact-form #forminator-module-114 {
+      display: block !important;
+      margin: 0 !important; }
+    #contact-form-wrap #contact-form a {
+      color: black;
+      font-size: 0.8rem; }
+      @media screen and (min-width: 800px) {
+        #contact-form-wrap #contact-form a {
+          font-size: 1rem; } }
+

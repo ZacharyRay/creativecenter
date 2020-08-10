@@ -1,0 +1,18 @@
+// Import settings (fonts, media queries, mixins etc.)
+@import "settings/media-queries";
+@import "settings/colors";
+@import "settings/fonts";
+@import "settings/animations";
+
+//import main
+
+@import "main/body";
+@import "main/header";
+@import "main/footer";
+
+// Import acf-elements
+
+@import "acf-elements/acf-hero";
+@import "acf-elements/acf-single-image";
+@import "acf-elements/acf-contact-form";
+

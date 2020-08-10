@@ -1,0 +1,63 @@
+// slider \\
+
+.main-carousel {
+  background: #EEE;
+}
+
+.carousel-cell {
+  display: none;
+  @include min-screen(800px){
+    display: block;
+    width: 100%;
+    height: 100vh;
+    margin-right: 0;
+    padding-top: 0%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+/* no circle */
+.flickity-button {
+  display: none;
+  @include min-screen(800px){
+    display: block;
+    background: transparent !important;
+    color: #FFED8B !important;
+  }
+}
+/* big previous & next buttons */
+.flickity-prev-next-button {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+.slider-is-single{
+  display: none;
+}
+
+// Mobile images \\
+
+#mobile-images{
+  #mobile-image{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100vw;
+    height: 100vh;
+    margin-right: 0;
+    padding-top: 0%;
+    @include min-screen(800px){
+      display: none;
+    }
+  }
+}
